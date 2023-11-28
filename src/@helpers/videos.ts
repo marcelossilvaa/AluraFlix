@@ -1,71 +1,84 @@
-import frontend1 from '../assets/01front-end/image 7 (1).png';
-import frontend2 from '../assets/01front-end/image 7 (2).png';
-import frontend3 from '../assets/01front-end/image 7 (3).png';
-import frontend4 from '../assets/01front-end/image 7 (3).png';
 
-import datascience1 from '../assets/02data-science/image 7 (5).png';
-import datascience2 from '../assets/02data-science/image 7 (6).png';
-import datascience3 from '../assets/02data-science/image 7 (7).png';
-import datascience4 from '../assets/02data-science/image 7 (5).png';
-
-import mobile1 from '../assets/03mobile/image 7 (9).png';
-import mobile2 from '../assets/03mobile/image 7 (10).png';
-import mobile3 from '../assets/03mobile/image 7 (11).png';
-import mobile4 from '../assets/03mobile/image 7 (9).png';
-
-export const frontEnd = [
+export const guerra = [
   {
     id: 1,
-    img: frontend1,
+    link: 'https://www.youtube.com/embed/6Gi4_GJXO4I?si=RJ1ESCLaacu7nDKG',
+    description: 'Guerra Fria'
   },
   {
     id: 2,
-    img: frontend2,
+    link: 'https://www.youtube.com/embed/HNw027hhbbw?si=oiKIuJkrmLDZtp4J',
+    description: '1ª Guerra Mundial'
   },
   {
     id: 3,
-    img: frontend3,
+    link: 'https://www.youtube.com/embed/LmShtQMtciI?si=-v-J2twP5H9CD_yU',
+    description: 'Guerra Rússia x Ucrânia'
   },
   {
     id: 4,
-    img: frontend4,
+    link: 'https://www.youtube.com/embed/Jhcr172zeCg?si=_8wcxMTGjj6wtrb3',
+    description: 'E se Hitler vecesse a guerra?'
   },
 ];
 
-export const dataScience = [
+export const historia = [
   {
     id: 1,
-    img: datascience1,
+    link: 'https://www.youtube.com/embed/q7E4XrfGGnE?si=I7-BPPeWSwqlc-ry',
+    description: 'História do Brasil'
   },
   {
     id: 2,
-    img: datascience2,
+    link: 'https://www.youtube.com/embed/rmkhVu7HA6c?si=uS8wtNAOcLx5CJ2x',
+    description: 'História do Japão'
   },
   {
     id: 3,
-    img: datascience3,
+    link: 'https://www.youtube.com/embed/79YrLCTa91E?si=SPjQrk4WD4O_7bdR',
+    description: '11 de Setembro'
   },
   {
     id: 4,
-    img: datascience4,
+    link: 'https://www.youtube.com/embed/ebm-fLo9-NA?si=s6Qfonn4bBKP428W',
+    description: 'Antigo Egito'
   },
 ];
 
-export const mobile = [
+export const biografias = [
   {
     id: 1,
-    img: mobile1,
+    link: 'https://www.youtube.com/embed/pYP7OGTdYY8?si=P4g8iJnbqZHEfcwL',
+    description: 'Nikola Tesla'
   },
   {
     id: 2,
-    img: mobile2,
+    link: 'https://www.youtube.com/embed/gPSk0Xjz0og?si=TqmORsM-1M-DeXW6',
+    description: 'Albert Einsten'
   },
   {
     id: 3,
-    img: mobile3,
+    link: 'https://www.youtube.com/embed/uAs_QMIzGMY?si=H4ply6qDApXdju4S',
+    description: 'Stephen Hawking'
   },
   {
     id: 4,
-    img: mobile4,
+    link: 'https://www.youtube.com/embed/J6o12jvEljw?si=a4fe6d6EpISFOQjH',
+    description: 'Freddie Mercury'
+  },
+  {
+    id: 5,
+    link: 'https://www.youtube.com/embed/YJcND-d2eqI?si=RYOaNO8CCjCanHTH',
+    description: 'Silvio Santos'
+  },
+  {
+    id: 6,
+    link: 'https://www.youtube.com/embed/3iGPclknn_8?si=D7E4WR9-McRYZLZB',
+    description: 'Leonardo Da Vinci'
+  },
+  {
+    id: 7,
+    link: 'https://www.youtube.com/embed/Ws4qIH8q4cE?si=brUvVBJi5-XXBtEU',
+    description: 'Chespirito (Chaves)'
   },
 ];

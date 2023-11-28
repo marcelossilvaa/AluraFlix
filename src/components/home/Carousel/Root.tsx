@@ -1,9 +1,13 @@
-import { ReactNode } from 'react';
+import { Carousel } from '.';
+import { biografias, guerra, historia } from '@/@helpers/videos';
 
-interface RootProps {
-  children: ReactNode;
-}
 
-export default function Root({ children }: RootProps) {
-  return <section className="px-10 -mt-44">{children}</section>;
+export default function Root() {
+  return (
+    <section className=" -mt-44">
+      <Carousel.Category data={guerra} tittle='Guerra'></Carousel.Category>
+      <Carousel.Category data={historia} tittle='História'></Carousel.Category>
+      <Carousel.Category data={biografias} tittle='Biografias'></Carousel.Category>
+    </section>
+  )
 }

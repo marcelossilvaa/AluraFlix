@@ -15,24 +15,17 @@ export default function Home() {
       </Header.Root>
       <Banner.Root>
         <Banner.Container>
-          <Banner.Category title="Front End" />
           <Banner.Content>
-            <Banner.Title title="SEO com React" />
+            <Banner.Title title="Leonardo Da Vinci" />
             <Banner.TextContent
-              text="Esse desafio é uma forma de aprendizado. É um mecanismo onde você pode se
-                engajar na resolução de um problema para poder aplicar todo o conhecimento
-                adquirido na Formação React."
+              text="De máquinas voadoras à Última Ceia, de estudos de anatomia à Mona Lisa... Conheça a vida de Leonardo da Vinci, o homem que inventou o futuro."
             />
           </Banner.Content>
         </Banner.Container>
-        <Banner.VideoContainer videoImage="banner" img={videoImage} />
+        <Banner.VideoContainer videoImage="banner" link={'https://www.youtube.com/embed/3iGPclknn_8?si=D7E4WR9-McRYZLZB'} />
       </Banner.Root>
 
-      <Carousel.Root>
-        <Carousel.FrontEnd></Carousel.FrontEnd>
-        <Carousel.DataScience></Carousel.DataScience>
-        <Carousel.Mobile></Carousel.Mobile>
-      </Carousel.Root>
+      <Carousel.Root/>
 
       <Footer.Root>
         <Footer.Logo></Footer.Logo>

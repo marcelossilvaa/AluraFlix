@@ -4,7 +4,7 @@ import Category from './Category';
 import Content from './Content';
 import Title from './Title';
 import TextContent from './TextContent';
-import VideoContainer from './VideoContainer';
+import VideoContainer from '../VideoContainer';
 
 export const Banner = {
   Root,
