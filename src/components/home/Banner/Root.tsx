@@ -6,8 +6,10 @@ interface RootProps {
 
 export default function Root({ children }: RootProps) {
   return (
-    <section className="max-w-full h-[809px] bannerImage px-10 flex items-center gap-[3.125rem]">
-      {children}
+    <section className="max-w-full h-[809px] bannerImage px-10 flex justify-center items-center gap-[3.125rem]">
+      <div className='max-w-7xl flex justify-between items-center -mt-44'>
+        {children}
+      </div>
     </section>
   );
 }

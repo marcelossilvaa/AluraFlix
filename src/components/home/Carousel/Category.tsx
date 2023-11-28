@@ -1,10 +1,14 @@
 import { useState } from 'react';
-import { frontEnd } from '@/@helpers/videos';
 import { Banner } from '../Banner';
 import { useSnapCarousel } from 'react-snap-carousel';
 import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
 
-export default function FrontEnd() {
+interface CarouselProps{
+  tittle: string
+  data: { id: number; link: string; description:string }[];
+}
+
+export default function Category({tittle, data}: CarouselProps) {
   const { scrollRef, next, prev } = useSnapCarousel();
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,14 +23,17 @@ export default function FrontEnd() {
   };
 
   return (
-    <>
-      <h2 className="bg-yellow-500 text-[35px] w-[204px] text-center "></h2>
+    <section className=''>
+      <div className='w-full max-w-7xl'>
+        <h2 className="bg-blue-200 text-[35px] w-[204px] text-center ">{tittle}</h2>
+      </div>
+      
       <div className="flex gap-5">
         <button onClick={handlePrev} disabled={currentIndex === 0}>
           <CaretLeft size={40} />
         </button>
         <ul
-          className="gap-4 my-3 mb-10"
+          className="gap-4 my-3 mb-16"
           ref={scrollRef}
           style={{
             display: 'flex',
@@ -35,19 +42,19 @@ export default function FrontEnd() {
             scrollSnapType: 'x mandatory',
           }}
         >
-          {frontEnd.map((frontEnd) => (
+          {data.map((data) => (
             <li
-              key={frontEnd.id}
-              className="bg-gray-300 text-5xl w-(250px) h-(250px) flex-shrink-0 text-white flex justify-center items-center overflow-hidden"
+              key={data.id}
+              className=" text-5xl flex-shrink-0 text-white flex justify-center items-center overflow-hidden"
             >
-              <Banner.VideoContainer videoImage="slide" key={frontEnd.id} img={frontEnd.img} />
+              <Banner.VideoContainer videoImage="slide" key={data.id} link={data.link} description={data.description}/>
             </li>
           ))}
         </ul>
-        <button onClick={handleNext} disabled={currentIndex === frontEnd.length - 1}>
+        <button onClick={handleNext} disabled={currentIndex === data.length - 1}>
           <CaretRight size={40} />
         </button>
       </div>
-    </>
+    </section>
   );
 }

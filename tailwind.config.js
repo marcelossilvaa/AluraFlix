@@ -8,11 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'color-primary-medium': '#2A7AE4',
-        'color-frontend': '#6BD1FF',
-        'color-backend': '#69953B',
-        'color-mobile': '#FFBA05',
-        'color-ux': '#DC6EBE',
+        'primary-medium': '#2A7AE4',
+        'blue-100': '#04D9D9',
+        'blue-200': '#04ADBF',
+        'blue-500': '#044A59',
+        'pink-100': '#D92378',
+        'pink-200': '#8C164D',
         'color-infra': '#9CD33B',
         'color-marketing': '#6B5BE2',
         'color-inovation': '#FF8C2A',
