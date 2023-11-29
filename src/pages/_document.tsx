@@ -1,4 +1,10 @@
+import Title from '@/components/home/Banner/Title';
 import { Html, Head, Main, NextScript } from 'next/document';
+import { Children } from 'react';
+
+interface TitleProps {
+  title: string;
+}
 
 export default function Document() {
   return (
