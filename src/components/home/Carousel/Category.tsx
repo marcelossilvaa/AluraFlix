@@ -28,7 +28,7 @@ export default function Category({tittle, data}: CarouselProps) {
         <h2 className="bg-blue-200 text-[35px] w-[204px] text-center ">{tittle}</h2>
       </div>
       
-      <div className="flex gap-5">
+      <div className="flex gap-1 md:gap-5">
         <button onClick={handlePrev} disabled={currentIndex === 0}>
           <CaretLeft size={40} />
         </button>

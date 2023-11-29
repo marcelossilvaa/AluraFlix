@@ -7,7 +7,7 @@ interface RootProps {
 export default function Root({ children }: RootProps) {
   return (
     <>
-      <header className="w-full h-24 bg-color-black-dark flex items-center  justify-between flex-col px-10">
+      <header className="w-full h-24 bg-color-black-dark flex items-center  justify-between flex-col px-2 md:px-10">
         <div className='flex justify-between w-full items-center h-full'>
           {children}
         </div>

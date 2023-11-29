@@ -3,5 +3,5 @@ interface TitleProps {
 }
 
 export default function Title({ title }: TitleProps) {
-  return <h1 className="text-title-medidum font-normal">{title}</h1>;
+  return <h1 className="text-4xl md:text-title-medidum font-normal">{title}</h1>;
 }

@@ -11,7 +11,7 @@ export default function VideoDefault({ videoImage, link, description }: VideoDef
     <div className='flex flex-col '>
       <iframe
       className={
-        videoImage === 'banner' ? 'w-[660px] h-[355px]' : 'w-[400px] h-[225px]'
+        videoImage === 'banner' ? 'w-[400px] h-[225px] md:w-[660px] md:h-[355px]' : ' w-[350px] h-[200px] md:w-[400px] md:h-[225px]'
       }
       src={link}
       title="YouTube video player"

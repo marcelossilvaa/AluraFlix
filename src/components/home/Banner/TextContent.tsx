@@ -3,5 +3,5 @@ interface TextContextProps {
 }
 
 export default function TextContent({ text }: TextContextProps) {
-  return <p className="text-body-medium text-xl font-normal">{text}</p>;
+  return <p className="text-base md:text-body-medium font-normal">{text}</p>;
 }
