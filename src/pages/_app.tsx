@@ -1,16 +1,17 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head';
-import logo from '@/assets/logo.svg';
+import favicon from '@/assets/favicon.png';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-    <Head>
-      <link rel="icon" href={logo} />
-    </Head>
-    <Component {...pageProps} />
-  </> 
-  )
-  
+      <Head>
+        {/* Converte o caminho da imagem para uma string */}
+        <link rel="icon" href={favicon.src} />
+        <title>NostalgiaFlix</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
