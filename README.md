@@ -1,6 +1,7 @@
 # Nostalgia Flix
 
-Welcome to Nostalgia Flix, your portal for nostalgic documentaries! This web project pays homage to the Nostalgia Channel by Castanhari on YouTube, utilizing technologies such as:
+Welcome to Nostalgia Flix, your portal for documentaries! This web project pays homage to the Canal  Nostalgia by Felipe Castanhari on YouTube.
+https://www.youtube.com/@nostalgia
 
 # Technologies Used
 
