@@ -8,10 +8,10 @@ interface VideoDefaultProps {
 
 export default function VideoDefault({ videoImage, link, description }: VideoDefaultProps) {
   return (
-    <div className='flex flex-col '>
+    <div className='flex flex-col items-center'>
       <iframe
       className={
-        videoImage === 'banner' ? 'w-[400px] h-[225px] md:w-[660px] md:h-[355px]' : ' w-[350px] h-[200px] md:w-[400px] md:h-[225px]'
+        videoImage === 'banner' ? 'w-[400px] h-[225px] md:w-[660px] md:h-[355px]' : ' w-[350px] h-[200px] md:w-[400px] md:h-[225px] 2xl:w-[500px] 2xl:h-[275px]'
       }
       src={link}
       title="YouTube video player"
@@ -20,7 +20,7 @@ export default function VideoDefault({ videoImage, link, description }: VideoDef
       allowFullScreen
       >
       </iframe>
-      <p className='text-xl'>{description}</p>
+      <p className='text-xl text-start'>{description}</p>
     </div>
     
   );

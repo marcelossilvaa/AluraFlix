@@ -1,25 +1,69 @@
-import { useState } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
 import { Banner } from '../Banner';
-import { useSnapCarousel } from 'react-snap-carousel';
 import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-interface CarouselProps{
+interface CarouselProps {
   tittle: string
-  data: { id: number; link: string; description:string }[];
+  data: { id: number; link: string; description: string }[];
 }
 
-export default function Category({tittle, data}: CarouselProps) {
-  const { scrollRef, next, prev } = useSnapCarousel();
-  const [currentIndex, setCurrentIndex] = useState(0);
+const NextArrow = (props: any) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: 'block', right: '10px', zIndex: 1 }}
+      onClick={onClick}
+    >
+      <CaretRight size={60} />
+    </div>
+  );
+};
 
-  const handleNext = () => {
-    next();
-    setCurrentIndex((prevIndex) => prevIndex + 1);
-  };
+const PrevArrow = (props: any) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: 'block', left: '10px', zIndex: 1 }}
+      onClick={onClick}
+    >
+      <CaretLeft size={60} />
+    </div>
+  );
+};
 
-  const handlePrev = () => {
-    prev();
-    setCurrentIndex((prevIndex) => prevIndex - 1);
+export default function Category({ tittle, data }: CarouselProps) {
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1324,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -28,33 +72,13 @@ export default function Category({tittle, data}: CarouselProps) {
         <h2 className="bg-blue-200 text-[35px] w-[204px] text-center ">{tittle}</h2>
       </div>
       
-      <div className="flex gap-1 md:gap-5">
-        <button onClick={handlePrev} disabled={currentIndex === 0}>
-          <CaretLeft size={40} />
-        </button>
-        <ul
-          className="gap-4 my-3 mb-16"
-          ref={scrollRef}
-          style={{
-            display: 'flex',
-            overflowX: 'hidden',
-            overflowY: 'hidden',
-            scrollSnapType: 'x mandatory',
-          }}
-        >
-          {data.map((data) => (
-            <li
-              key={data.id}
-              className=" text-5xl flex-shrink-0 text-white flex justify-center items-center overflow-hidden"
-            >
-              <Banner.VideoContainer videoImage="slide" key={data.id} link={data.link} description={data.description}/>
-            </li>
-          ))}
-        </ul>
-        <button onClick={handleNext} disabled={currentIndex === data.length - 1}>
-          <CaretRight size={40} />
-        </button>
-      </div>
+      <Slider {...settings} className='mx-10 max-md:mx-4'>
+        {data.map((item) => (
+          <div key={item.id} className=" text-5xl flex-shrink-0 text-white flex justify-center items-center ">
+            <Banner.VideoContainer videoImage="slide" key={item.id} link={item.link} description={item.description} />
+          </div>
+        ))}
+      </Slider>
     </section>
   );
 }

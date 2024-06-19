@@ -1,7 +1,6 @@
 import { Carousel } from '.';
 import { biografias, guerra, historia } from '@/@helpers/videos';
 
-
 export default function Root() {
   return (
     <section className=" -mt-44">
